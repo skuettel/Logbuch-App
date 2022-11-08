@@ -1,5 +1,7 @@
 <div fxFlexFill fxLayout="column">
-  <app-header></app-header>
+  <app-header (loginChanged)="loggedIn = event$"></app-header>
+  <app-sidebar (searchTermChanged)="searchTerm = event$"></app-sidebar>
+  <app-content [searchTerm]></app-content>
 
   <div fxLayout="column" fxFlex>
     <div fxFlex style="margin: 1%">
